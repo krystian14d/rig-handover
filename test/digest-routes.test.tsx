@@ -45,7 +45,7 @@ describe('GET /digest/:night', () => {
     }
     expect(inOrder(html, JOBS)).toBe(true);
     expect(html).toContain('—');
-    expect(html).toContain("1 line didn't parse");
+    expect(html).toContain('1 line didn&#39;t parse');
   });
 
   it('says nothing ran for an empty night', async () => {
@@ -65,7 +65,7 @@ describe('GET /digest/:night', () => {
     const html = await res.text();
     expect(res.status).toBe(200);
     expect(html).toContain('a/job');
-    expect(html).toContain("1 line didn't parse");
+    expect(html).toContain('1 line didn&#39;t parse');
   });
 });
 
