@@ -17,7 +17,7 @@ function isStatus(v: unknown): v is RunStatus {
 }
 
 // Parse one log line at the edge; null when it doesn't parse or doesn't match the shape.
-function parseLine(text: string): RunLine | null {
+export function parseLine(text: string): RunLine | null {
   let raw: unknown;
   try {
     raw = JSON.parse(text);
