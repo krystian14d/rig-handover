@@ -6,4 +6,5 @@
 - Missing data renders as `—`, never as an empty cell and never dropped.
 - Times: keep the offset from the log; never convert to UTC for display.
 - Tests: vitest, next to nothing. Test through `app.request()` for routes.
-- Small commits, one issue each, `closes #n` in the message.
+- Small commits, one issue each, `refs #n` in the message (not `closes #n`: the worker closes
+  the issue with its comment, ADR 0005).
