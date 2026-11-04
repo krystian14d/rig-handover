@@ -3,7 +3,7 @@ plan: morning-digest
 status: done
 owner: rook
 opened: 2026-10-29
-closed: 2026-11-03
+closed: 2026-11-04 (run 2; run 1 closed 2026-11-03)
 ---
 
 # Morning digest
@@ -95,3 +95,18 @@ Done when: the preview link no longer shows the lane marker.
 #7 was closed once before the reviewer had looked, then reopened until the review was in. The
 preview was a GitHub Pages build artifact (`.github/workflows/preview.yml`), never committed; the
 clean-up run uploaded it over the same link with `LANE_MARKER` unset.
+
+### Run 2 (2026-11-04)
+
+A new review round with a new lane marker. One issue per plan section; § 1 and § 2 re-checked
+the run-1 work rather than rebuilding it. #7 was reopened, then closed as a duplicate of #11.
+
+| # | Issue | Source | Blocked by | Worker | Closed |
+|---|-------|--------|-----------|--------|--------|
+| 9 | Run log reader (run 2) | § 1 | — | claude-code · claude-opus-5-5 · default | 2026-11-04 |
+| 10 | Digest page: page, JSON, board link, route tests (run 2) | § 2 | — | claude-code · claude-opus-5-5 · default | 2026-11-04 |
+| 11 | Preview for review (run 2) | § 3 | #10 | claude-code · claude-opus-5-5 · default | 2026-11-04 |
+| 12 | Clean up the preview (run 2) | § 4 | #11 | claude-code · claude-opus-5-5 · default | 2026-11-04 |
+
+#11 stayed open until the course reported the reviewer had seen the preview. The clean-up ran
+`preview.yml` with `with_marker=false` over the same link and deleted the `LANE_MARKER` secret.
